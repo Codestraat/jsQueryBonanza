@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>JsQuery Bonanza</title>
+
+
+  <style>
+    body{
+        max-width: 700px;
+        margin: auto;
+    }
+
+    .container{
+        position: absolute;
+        top: 50px;
+        align-content: center;
+        
+        
+    }
+
+#box{
+    background-color: #333;
+    color: #fff;
+    width: 500px;
+    height: 90px;
+    padding: 40px;
+    text-align: center;
+        }
+
+    header{
+      background: rgb(47, 53, 112);
+      color:#fff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 4px #000 solid;
+      margin-bottom: 10px;
+        }
+        .intro {
+           font-size: 150%;
+           color: red;
+
+        
+</style>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+</head>
+<body>
+  <header>
+    <h1>jsQuery Bonanza</h1>
+  </header>
+    <br><br>
+    <button id="btn1">Fade Out</button><br><br>
+    <div id="div1">When the button is clicked the text fades out</div>
+    <hr>
+    <br><br>
+    <button id="btn2">Append</button><br><br>
+    <p>When the button is clicked </p>
+    <hr>
+    <br><br>
+    <button>Click to fade in boxes</button><br><br>
+    <div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+    <div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+    <hr>
+    <h3>Mouse Events</h3>
+        <button id="btn5">Slide Toggle</button>
+        <p class="para1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis deleniti eveniet dolor iste dicta recusandae ab nesciunt, voluptas nemo molestias sapiente, iusto architecto at illo dolores minima culpa odio officia.sit amet consectetur adipisicing elit. Omnis deleniti eveniet dolor iste dicta recusandae ab nesciunt, voluptas nemo molestias sapiente, iusto architecto at illo dolores minima culpa odio officia.</p>
+        <hr>
+        <br>
+        <button class="btn btn-primary btn-lg">Toggle</button>
+        <div><img src="splash.jpg"></div>
+        <hr>
+        <br>
+        <div id="sample-container">
+		
+          <button class="sample-button">Button 1</button>
+         
+      
+        </div>
+        <hr>
+        <button id="btn7">Change content of elements</button>
+        <p id="para3">This is a paragraph.</p>
+        <hr>
+        <p>Name: <input type="text" name="user"></p>
+        <button id="btn8">Set the value of the input field</button>
+        <hr>
+        ​<p class="para">This is a paragraph.</p>
+        <p>This is another paragraph.</p>
+        <button id="btn9">Add a class name to the first p element</button>
+       
+	
+
+<script>
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    $("#div1").fadeOut();
+    
+  });
+  $("p").append();
+  $("#btn2").click(function(){
+  $("p").append("append text here.");
+    });
+
+  
+   
+    $("#btn3").click(function(){
+    $("#div3").fadeIn("slow");
+    $("#div3").fadeIn(3000);
+    
+  });
+
+  $(function () {
+  $('button').click(function() {
+    $(this).next('div').slideToggle();
+  });
+});
+
+$('#slideUp').click(function() {
+        $('#slideMe').slideUp('slow');
+    });
+    $('#slideDown').click(function() {
+        $('#slideMe').slideDown();
+    });
+
+});
+    $(document).ready(function(){
+        $('#btn5').click(function(){
+            $('.para1').toggle();
+        });
+      });
+
+      $(function(){
+
+
+$("#sample-container").on("click", ".sample-button", function(){
+  alert($(this).text() + " clicked!");
+});
+
+$("#btn7").click(function(){
+    $("#para3").html("Hello <b>world!</b>");
+  });
+
+  
+  $("#btn8").click(function(){
+    $("input:text").val("Kennyola Kongi");
+  });
+
+  $("#btn9").click(function(){
+    $("#para:first").addClass("intro");
+  });
+});
+</script>
+
+ 
+</body>
+</html>
